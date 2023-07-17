@@ -1,0 +1,28 @@
+import Userclass from './Userclass';
+
+function App() {
+return (
+    <div className="App">
+          <Users />
+    )
+}
+
+
+
+// (Usersfile.js File)
+
+export function Users()
+{
+  return(
+
+  <div>
+  <h1>Users Components</h1>
+  <h1>Components Class</h1>
+  <div>{10*20}</div>
+  </div>
+  )
+
+}
+
+// if we don't want to use (export default users) then 
+// use export with the function and also use {users} in app.js page
