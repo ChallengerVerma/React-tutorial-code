@@ -1,0 +1,51 @@
+import { useState } from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import Student from './Student';
+
+function App() {
+const [name ,setData]= useState("Deepti Verma")
+function UpdateData()
+ {
+  alert("XYZ")
+ }
+ console.warn(">>>>>>>>>>>>>>>>");
+
+return (
+    <div className="App">
+      <h1>props in React :)</h1>
+      <Student  name={"Deepti"} email={"deepti@test.com"} others={{address:'delhi', mobile:"000"}}/>
+      <Student  name={"ABC"} email={"abc@test.com"} others={{address:'UP', mobile:"000"}}/>
+      <Student  name={"XYZ"} email={"xyz@test.com"} others={{address:'Noida', mobile:"000"}}/>
+
+or 
+      <student name= {name} />
+      <button onClick={()=> {setname("Verma")}}>Update Name</button>
+</div>
+);
+}
+
+export default App;
+
+
+
+
+
+
+student.js File
+
+function Student(props) {
+    console.log(props)
+    return (
+        <div style={{backgroundColor: "skyblue", margin:10}}>
+            <h2>Hello {props.name}</h2>
+            <h2>Email: {props.email}</h2>
+            <h2>Adress:{props.others.address}</h2>
+            <h2>Mobile No.:{props.others.mobile}</h2>
+
+        </div>
+    )
+
+}
+
+export default Student
