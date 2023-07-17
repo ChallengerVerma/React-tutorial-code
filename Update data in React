@@ -1,0 +1,40 @@
+import { useState } from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import {Users} from './Users';
+import Userclass from './Userclass';
+import Student from './Student';
+
+function App() {
+
+// const [name ,setData]= useState("Deepti Verma")
+ const [data, setData]= useState(0)
+ function UpdateData()
+ {
+  setData(data+1)
+ }
+ console.warn(">>>>>>>>>>>>>>>>");
+return (
+    <div className="App">
+<h1>{data}</h1>
+     <button onClick={UpdateData}>Update Data</button>
+      <Userclass />
+</div>
+
+
+
+
+
+
+(Userclass.js)
+
+import React, {Component} from "react";
+export default class Userclass extends Component{
+    render()
+    {
+        return(
+            <div>Hiii</div>
+        )
+    }
+
+}
